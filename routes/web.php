@@ -32,11 +32,13 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 //   Admin
 // =======================
 
-Route::get('/admin',    [AdminController::class, 'index'])->name('admin.index');
-Route::get('/admin-list',    [AdminController::class, 'getAdminData'])->name('admin.list');
-Route::get('/admin-add',    [AdminController::class, 'create'])->name('admin.add');
-Route::post('/admin-store',    [AdminController::class, 'store'])->name('admin.store');
-Route::get('/admin-edit/{id}',    [AdminController::class, 'edit'])->name('admin.edit');
-Route::post('/admin-update',    [AdminController::class, 'update'])->name('admin.update');
-Route::get('/admin-delete/{id}',    [AdminController::class, 'destroy'])->name('admin-delete');
+Route::middleware('auth')->group(function () {
+    Route::get('/admin',    [AdminController::class, 'index'])->name('admin.index');
+    Route::get('/admin-list',    [AdminController::class, 'getAdminData'])->name('admin.list');
+    Route::get('/admin-add',    [AdminController::class, 'create'])->name('admin.add');
+    Route::post('/admin-store',    [AdminController::class, 'store'])->name('admin.store');
+    Route::get('/admin-edit/{id}',    [AdminController::class, 'edit'])->name('admin.edit');
+    Route::post('/admin-update',    [AdminController::class, 'update'])->name('admin.update');
+    Route::get('/admin-delete/{id}',    [AdminController::class, 'destroy'])->name('admin-delete');
 
+});

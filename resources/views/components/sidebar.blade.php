@@ -5,31 +5,23 @@
                 <li class="menu-title">
                     <span>Main menu</span>
                 </li>   
-                <li class="has-child open">
-                    <a href="#" class="active">
+                <li>
+                    <a href="{{ route('home') }}" class="">
                         <span data-feather="home" class="nav-icon"></span>
                         <span class="menu-text">Dashboard</span>
-                        <span class="toggle-icon"></span>
                     </a>
                    
                 </li>
 
+                
+                <li>
+                    <a href="{{ route('admin.index') }}" class="">
+                        <span data-feather="user-check" class="nav-icon"></span>
+                        <span class="menu-text">Admin</span>
+                    </a>
+                </li>
       
-                <li>
-                    <a href="profile-setting.html" class="">
-                        <span data-feather="settings" class="nav-icon"></span>
-                        <span class="menu-text">Settings</span>
-                    </a>
-                </li>
-       
-
-                <li>
-                    <a href="faq.html" class="">
-                        <span data-feather="help-circle" class="nav-icon"></span>
-                        <span class="menu-text">FAQ's</span>
-                    </a>
-                </li>
-
+            
             </ul>
         </div>
     </div>

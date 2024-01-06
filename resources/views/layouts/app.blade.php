@@ -13,6 +13,7 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/plugin.min.css') }}">
@@ -21,6 +22,8 @@
 
     <!-- endinject -->
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/img/favicon.png') }}">
+
+    
 </head>
 
 <body class="layout-light side-menu overlayScroll">
@@ -36,10 +39,7 @@
             @include('components.footer')
         </main>
 
-
-
-
-    <div id="overlayer">
+        <div id="overlayer">
         <span class="loader-overlay">
             <div class="atbd-spin-dots spin-lg">
                 <span class="spin-dot badge-dot dot-primary"></span>
@@ -49,6 +49,9 @@
             </div>
         </span>
     </div>
+
+{{--
+    
     <div class="overlay-dark-sidebar"></div>
     <div class="customizer-overlay"></div>
 
@@ -121,7 +124,7 @@
                 <!-- ends: .customizer__single -->
             </div>
         </div>
-    </div>
+    </div> --}}
 
 
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDduF2tLXicDEPDMAtC6-NLOekX0A5vlnY"></script>
